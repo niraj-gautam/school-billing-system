@@ -11,4 +11,4 @@ To run the development server locally:
 - run the server:<br/>
 ```npm run dev```<br/>
 
-- visit ```localhost:port``` ,outputed in your terminal, to checkout the webpage.
+- visit ```localhost:port``` ,outputted in your terminal, to checkout the webpage.
