@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+
+    .homeContainer {
+        width: 100%;
+        // background-color: lightcoral;
+        // flex: 6;
+
+        .widgets {
+            // display: flex;
+            // flex-wrap: wrap;
+
+            gap: 1.25rem;
+            padding: 1.25rem;
+            // background-color: lightblue;
+            display: grid;
+            // grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

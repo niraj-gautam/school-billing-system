@@ -1,0 +1,91 @@
+.widget {
+    // background-color: red;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 2px 4px 10px 1px hsla(0, 0%, 0%, 0.47);
+    box-shadow: 2px 4px 10px 1px hsla(0, 0%, 79%, 0.47);
+    border-radius: 10px;
+    padding: 0.625rem;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // background-color: lightcoral;
+        gap: 0.5rem;
+
+        .title {
+            font-weight: bold;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: hsl(0, 0%, 60%);
+        }
+
+        .counter {
+            font-size: 1.75rem;
+            font-weight: 300;
+            text-transform: capitalize;
+        }
+
+        .link {
+            font-size: 0.75rem;
+            border-bottom: 0.5px solid hsl(0, 0%, 60%);
+            width: max-content;
+            cursor: pointer;
+
+            &::first-letter {
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                border-bottom: 0.5px solid hsl(0, 0%, 0%);
+            }
+        }
+    }
+
+    .right {
+        // background-color: lightblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .percentage {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+
+            &.positive {
+                color: green;
+            }
+            &.negative {
+                color: hsl(0, 100%, 50%);
+            }
+        }
+        .icon {
+            font-size: 1.25rem;
+            align-self: flex-end;
+            border-radius: 7.5px;
+            padding: 0.25rem;
+
+            &.crimson {
+                color: hsl(348, 83%, 47%);
+                background-color: hsla(0, 100%, 50%, 0.2);
+            }
+
+            &.golden {
+                color: hsl(43, 74%, 49%);
+                background-color: hsla(43, 74%, 49%, 0.2);
+            }
+
+            &.green {
+                color: hsl(120, 100%, 25%);
+                background-color: hsla(120, 100%, 25%, 0.2);
+            }
+
+            &.purple {
+                color: hsl(300, 100%, 25%);
+                background-color: hsla(300, 100%, 25%, 0.2);
+            }
+        }
+    }
+}

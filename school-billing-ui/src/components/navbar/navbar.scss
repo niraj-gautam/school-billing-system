@@ -1,0 +1,103 @@
+.navbar {
+    height: 3.5rem;
+    border-bottom: 0.5px solid hsl(0, 6%, 90%);
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: hsl(0, 1%, 30%);
+    padding: 0 1.25rem;
+
+    .wrapper {
+        width: 100%;
+        // background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        border: 1px solid hsl(0, 6%, 90%);
+        border-radius: 7.5px;
+        padding: 0.25rem 0.5rem;
+
+        input {
+            font-size: 1rem;
+            color: hsl(0, 1%, 30%);
+            font-weight: 600;
+
+            border: none;
+            background: transparent;
+
+            &::placeholder {
+                font-size: 1rem;
+                font-weight: normal;
+            }
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+        input[type="search"]::-webkit-search-cancel-button {
+            display: none;
+        }
+
+        .icon {
+            color: hsl(0, 1%, 30%);
+            cursor: pointer;
+            margin-left: 0.25rem;
+            border-radius: 50%;
+            padding: 0.25rem;
+
+            &:hover {
+                background-color: hsl(250, 100%, 95%);
+            }
+        }
+    }
+
+    .items {
+        // background-color: lightcoral;
+        // padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        .item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.25rem;
+
+            &:hover {
+                background-color: hsl(250, 100%, 95%);
+                border-radius: 50%;
+
+                &:nth-child(4) {
+                    background-color: transparent;
+                    border: 1px solid hsl(250, 100%, 95%);
+                }
+            }
+
+            &:nth-child(3) {
+                border-radius: 7.5px;
+            }
+
+            &:nth-child(4) {
+                border: 1px solid transparent;
+            }
+
+            .title {
+                margin-left: 0.25rem;
+            }
+            .avatar {
+                height: 2rem;
+                width: 2rem;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}
