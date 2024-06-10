@@ -1,7 +1,7 @@
 import "./graph.scss";
 
 const Graph = () => {
-    return <div>Graph</div>;
+    return <div className="graph">Graph</div>;
 };
 
 export default Graph;

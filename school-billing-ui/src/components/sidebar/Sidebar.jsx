@@ -45,7 +45,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <DescriptionOutlinedIcon className="icon" />
-                        <span>Report</span>
+                        <span>Bill</span>
                     </li>
                     <p className="title">Setting</p>
 

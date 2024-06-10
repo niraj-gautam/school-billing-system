@@ -8,11 +8,6 @@ import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 
 const Widget = ({ type }) => {
-    const tempData = {
-        amount: {},
-        count: {},
-        percentage: {},
-    };
     let data;
 
     switch (type) {
@@ -53,7 +48,7 @@ const Widget = ({ type }) => {
         case "feesCollected":
             data = {
                 title: "fees collected",
-                isMoney: false,
+                isMoney: true,
                 count: "1,60,000",
                 includesPercentage: true,
                 isPercentageIncrease: false,
@@ -65,11 +60,11 @@ const Widget = ({ type }) => {
         case "feesRemaining":
             data = {
                 title: "fees remaining",
-                isMoney: false,
+                isMoney: true,
                 count: "95,000",
                 includesPercentage: true,
-                isPercentageIncrease: false,
-                percentage: "30",
+                isPercentageIncrease: true,
+                percentage: "15",
                 link: "view all fees",
                 icon: <AttachMoneyOutlinedIcon className="icon green" />,
             };
@@ -96,11 +91,12 @@ const Widget = ({ type }) => {
             break;
         case "report":
             data = {
-                title: "view report",
+                title: "Billing",
+                isMoney: false,
                 isReport: true,
                 count: "details",
                 includesPercentage: false,
-                link: "view report",
+                link: "view bills",
                 icon: <DescriptionOutlinedIcon className="icon purple" />,
             };
             break;
@@ -112,7 +108,9 @@ const Widget = ({ type }) => {
         <div className="widget">
             <div className="left">
                 <span className="title">{data.title}</span>
-                <span className="counter">{data.count}</span>
+                <span className="counter">
+                    {data.isMoney ? `Rs.${data.count}` : data.count}
+                </span>
                 <span className="link">{data.link}</span>
             </div>
             <div className="right">

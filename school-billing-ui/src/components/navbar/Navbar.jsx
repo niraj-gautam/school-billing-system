@@ -2,12 +2,16 @@ import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import FullscreenOutlinedIcon from "@mui/icons-material/FullscreenOutlined";
-import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
 import userProfile from "../../assets/userProfile.jpg";
+import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
+    user == "user" && (user = { picture: userProfile });
+    const [language, setLanguage] = useState("EN");
+    const changeLanguage = () => {
+        setLanguage(language == "EN" ? "NP" : "EN");
+    };
     return (
         <div className="navbar">
             <div className="wrapper">
@@ -23,15 +27,13 @@ const Navbar = () => {
                     <div className="item">
                         <FullscreenOutlinedIcon className="icon" />
                     </div>
-                    <div className="item">
+                    <div className="item" onClick={changeLanguage}>
                         <LanguageOutlinedIcon className="icon" />
-                        <span children className="title">
-                            English
-                        </span>
+                        <span className="title">{language}</span>
                     </div>
                     <div className="item">
                         <img
-                            src={userProfile}
+                            src={user.picture}
                             alt="user image"
                             className="avatar"
                         />
