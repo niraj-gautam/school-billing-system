@@ -41,8 +41,8 @@ const Progress = () => {
                     included.
                 </p>
                 <div className="summary">
-                    {summary.map((item) => (
-                        <div className="item">
+                    {summary.map((item, index) => (
+                        <div className="item" key={index}>
                             <div className="itemTitle">{item.title}</div>
                             <div className="itemResult">
                                 {item.toChange &&

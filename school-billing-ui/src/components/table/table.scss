@@ -1,0 +1,39 @@
+.table {
+    // padding: 1rem;
+    .tableCell {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        // display: flex;
+        flex-direction: column;
+
+        .cellWrapper {
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            // background-color: red;/
+
+            .image {
+                height: 2rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 0.75rem;
+            }
+        }
+
+        .status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 5px;
+
+            &.paid {
+                color: green;
+                background-color: rgba(0, 128, 0, 0.151);
+            }
+
+            &.due {
+                color: goldenrod;
+                background-color: rgba(189, 189, 3, 0.103);
+            }
+        }
+    }
+}
