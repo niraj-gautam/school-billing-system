@@ -19,48 +19,66 @@ const Sidebar = () => {
             <div className="center">
                 <ul>
                     <p className="title">Overview</p>
-                    <li>
-                        <DashboardIcon className="icon" />
-                        <span>Dashboard</span>
-                    </li>
+                    <Link to="/" className="link">
+                        <li>
+                            <DashboardIcon className="icon" />
+                            <span>Dashboard</span>
+                        </li>
+                    </Link>
                     <p className="title">Student</p>
-                    <li>
-                        <PersonOutlineOutlinedIcon className="icon" />
-                        <span>Students</span>
-                    </li>
-                    <li>
-                        <PersonOffOutlinedIcon className="icon" />
-                        {/* <Link to="student/inactive"> Click for Inactive Students</Link> */}
-                        <span>Inactive Students</span>
-                    </li>
+                    <Link to="/student" className="link">
+                        <li>
+                            <PersonOutlineOutlinedIcon className="icon" />
+                            <span>Students</span>
+                        </li>
+                    </Link>
+                    <Link to="/student/inactive" className="link">
+                        <li>
+                            <PersonOffOutlinedIcon className="icon" />
+                            {/* <Link to="student/inactive"> Click for Inactive Students</Link> */}
+                            <span>Inactive Students</span>
+                        </li>
+                    </Link>
                     <p className="title">Billing</p>
 
-                    <li>
-                        <SchoolOutlinedIcon className="icon" />
-                        <span>Grade/Section</span>
-                    </li>
-                    <li>
-                        <AttachMoneyOutlinedIcon className="icon" />
-                        <span>Fees</span>
-                    </li>
-                    <li>
-                        <DescriptionOutlinedIcon className="icon" />
-                        <span>Bill</span>
-                    </li>
+                    <Link to="/" className="link">
+                        <li>
+                            <SchoolOutlinedIcon className="icon" />
+                            <span>Grade/Section</span>
+                        </li>
+                    </Link>
+                    <Link to="/" className="link">
+                        <li>
+                            <AttachMoneyOutlinedIcon className="icon" />
+                            <span>Fees</span>
+                        </li>
+                    </Link>
+                    <Link to="/" className="link">
+                        <li>
+                            <DescriptionOutlinedIcon className="icon" />
+                            <span>Bill</span>
+                        </li>
+                    </Link>
                     <p className="title">Setting</p>
 
-                    <li>
-                        <AccountCircleOutlinedIcon className="icon" />
-                        <span>Profile</span>
-                    </li>
-                    <li>
-                        <GroupAddOutlinedIcon className="icon" />
-                        <span>Users</span>
-                    </li>
-                    <li>
-                        <LogoutOutlinedIcon className="icon" />
-                        <span>Logout</span>
-                    </li>
+                    <Link to="/" className="link">
+                        <li>
+                            <AccountCircleOutlinedIcon className="icon" />
+                            <span>Profile</span>
+                        </li>
+                    </Link>
+                    <Link to="/" className="link">
+                        <li>
+                            <GroupAddOutlinedIcon className="icon" />
+                            <span>Users</span>
+                        </li>
+                    </Link>
+                    <Link to="/" className="link">
+                        <li>
+                            <LogoutOutlinedIcon className="icon" />
+                            <span>Logout</span>
+                        </li>
+                    </Link>
                 </ul>
             </div>
             <div className="bottom">

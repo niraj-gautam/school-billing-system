@@ -1,0 +1,23 @@
+.createBtn {
+    background-color: hsl(253, 100%, 61%);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        outline: 1px solid hsl(253, 100%, 61%);
+        background-color: none;
+    }
+    span {
+        font-size: 0.875rem;
+    }
+
+    .icon {
+        margin-right: 0.5rem;
+        font-size: large;
+    }
+}
