@@ -5,8 +5,6 @@ import DriveFolderUploadIcon from "@mui/icons-material/DriveFolderUpload";
 import { useState, useEffect } from "react";
 
 const Form = ({ isForm }) => {
-    // const [readOnly , setReadOnly] = useState(inputElem)
-
     const [file, setFile] = useState("");
 
     useEffect(() => {

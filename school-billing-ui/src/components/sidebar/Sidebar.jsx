@@ -41,7 +41,7 @@ const Sidebar = () => {
                     </Link>
                     <p className="title">Billing</p>
 
-                    <Link to="/" className="link">
+                    <Link to="/grade" className="link">
                         <li>
                             <SchoolOutlinedIcon className="icon" />
                             <span>Grade/Section</span>

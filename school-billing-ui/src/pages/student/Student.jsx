@@ -25,6 +25,8 @@ const Student = () => {
                         className="bottom"
                         rowData={studentDatatableRow}
                         columnData={studentDatatableColumn}
+                        pageSize={10}
+                        tableWidth={95}
                     />
                 </main>
             </div>

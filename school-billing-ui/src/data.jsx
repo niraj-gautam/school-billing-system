@@ -219,6 +219,7 @@ export const studentDatatableColumn = [
         },
     },
 ];
+
 export const inactiveStudentDatatableColumn = [
     { field: "id", headerName: "ID", width: 100 },
     {
@@ -273,6 +274,119 @@ export const inactiveStudentDatatableColumn = [
         width: 120,
         renderCell: () => {
             return <span className="viewButton"> Mark Active </span>;
+        },
+    },
+];
+
+export const gradeDatatableRow = [
+    {
+        id: 1,
+        gradeLevel: "1",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 2,
+        gradeLevel: "2",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 3,
+        gradeLevel: "3",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 4,
+        gradeLevel: "4",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 5,
+        gradeLevel: "5",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 6,
+        gradeLevel: "6",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 7,
+        gradeLevel: "7",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 8,
+        gradeLevel: "8",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 9,
+        gradeLevel: "9",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 10,
+        gradeLevel: "10",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 11,
+        gradeLevel: "11",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+    {
+        id: 12,
+        gradeLevel: "12",
+        section: "A, B, C",
+        totalFee: 25000,
+    },
+];
+
+export const gradeDatatableColumn = [
+    { field: "id", headerName: "S.N.", width: 100 },
+    {
+        field: "gradeLevel",
+        headerName: "Grade Level",
+        width: 150,
+    },
+    {
+        field: "section",
+        headerName: "Sections",
+        width: 200,
+    },
+    {
+        field: "totalFee",
+        headerName: "Total Fees",
+        width: 200,
+    },
+
+    {
+        field: "action",
+        headerName: "Action",
+        sortable: false,
+        disableColumnMenu: true,
+        width: 175,
+        renderCell: () => {
+            return (
+                <Link
+                    to={"/student/:studentID"}
+                    className="link"
+                    style={{ textDecoration: "none" }}
+                >
+                    <span className="viewButton"> Edit grade/section</span>
+                </Link>
+            );
         },
     },
 ];

@@ -11,7 +11,7 @@ import userProfile from "../../assets/userProfile.jpg";
 
 const rows = [
     {
-        id: 1143155,
+        id: 1,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -21,7 +21,7 @@ const rows = [
         status: "Paid",
     },
     {
-        id: 132155,
+        id: 2,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -31,7 +31,7 @@ const rows = [
         status: "Paid",
     },
     {
-        id: 15554,
+        id: 3,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -41,7 +41,7 @@ const rows = [
         status: "Due",
     },
     {
-        id: 114319,
+        id: 4,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -51,7 +51,7 @@ const rows = [
         status: "Due",
     },
     {
-        id: 1143185,
+        id: 5,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -61,7 +61,7 @@ const rows = [
         status: "Due",
     },
     {
-        id: 1143165,
+        id: 6,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -71,7 +71,7 @@ const rows = [
         status: "Due",
     },
     {
-        id: 114540,
+        id: 7,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -81,7 +81,7 @@ const rows = [
         status: "Due",
     },
     {
-        id: 1140085,
+        id: 8,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -91,7 +91,7 @@ const rows = [
         status: "Paid",
     },
     {
-        id: 1170155,
+        id: 9,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,
@@ -101,7 +101,7 @@ const rows = [
         status: "Paid",
     },
     {
-        id: 1133655,
+        id: 10,
         studentName: "Niraj Gautam",
         img: userProfile,
         grade: 10,

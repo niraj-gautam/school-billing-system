@@ -7,7 +7,7 @@ import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 
-const Widget = ({ type }) => {
+const Widget = ({ type, hasLink }) => {
     let data;
 
     switch (type) {
@@ -111,7 +111,7 @@ const Widget = ({ type }) => {
                 <span className="counter">
                     {data.isMoney ? `Rs.${data.count}` : data.count}
                 </span>
-                <span className="link">{data.link}</span>
+                {!hasLink && <span className="link">{data.link}</span>}
             </div>
             <div className="right">
                 <div
@@ -132,6 +132,10 @@ const Widget = ({ type }) => {
             </div>
         </div>
     );
+};
+
+Widget.defaultProps = {
+    hasLink: true,
 };
 
 export default Widget;

@@ -1,0 +1,40 @@
+.grade {
+    display: flex;
+
+    .gradeContainer {
+        width: 100%;
+
+        .mainContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .main {
+                width: 85%;
+                padding: 1.25rem;
+
+                .top {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: end;
+                    justify-content: space-between;
+                    padding: 0 1.75rem;
+                    margin-bottom: 1.25rem;
+
+                    .widgets {
+                        display: flex;
+                        gap: 1rem;
+                    }
+
+                    .title {
+                        color: hsl(0, 0%, 41%);
+                        // background-color: red;
+                        font-weight: bold;
+                        font-size: 0.875rem;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -23,6 +23,8 @@ const Inactive = () => {
                         className="bottom"
                         rowData={studentDatatableRow}
                         columnData={inactiveStudentDatatableColumn}
+                        pageSize={10}
+                        tableWidth={95}
                     />
                 </main>
             </div>

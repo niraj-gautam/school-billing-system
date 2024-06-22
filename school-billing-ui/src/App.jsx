@@ -9,6 +9,8 @@ import {
     Route,
     Link,
 } from "react-router-dom";
+import Grade from "./pages/grade/Grade";
+import { GradeForm } from "./pages/gradeform/GradeForm";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
     {
         path: "/student/:studentID",
         element: <Single />,
+    },
+    {
+        path: "/grade",
+        element: <Grade />,
+    },
+    {
+        path: "/grade/create",
+        element: <GradeForm />,
     },
 ]);
 
