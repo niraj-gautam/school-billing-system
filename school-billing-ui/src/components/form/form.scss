@@ -45,7 +45,7 @@
                 flex-wrap: wrap;
                 // align-items: center;
                 // justify-content: center;
-                gap: 1.25rem;
+                gap: 1.125rem;
 
                 .formInput {
                     // visibility: hidden;
@@ -69,8 +69,7 @@
                     input {
                         padding: 0.5rem;
                         font-size: 1.125rem;
-                        font-weight: 400;
-
+                        font-weight: 500;
                         width: 80%;
                         border: none;
                         border-bottom: 1px solid gray;
@@ -84,6 +83,21 @@
                     padding: 0.75rem 3rem;
                     // width: 10rem;
                     cursor: pointer;
+                    border-radius: 7.5px;
+                    border: none;
+                    background-color: transparent;
+                    color: gray;
+                    border: 1px solid hsl(253, 100%, 61%);
+
+                    &:hover {
+                        color: white;
+                        background-color: hsl(253, 100%, 61%);
+                    }
+                    &:active {
+                        color: gray;
+                        border: 1px solid hsl(253, 100%, 61%);
+                        background-color: transparent;
+                    }
                 }
             }
         }

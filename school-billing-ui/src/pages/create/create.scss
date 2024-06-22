@@ -1,0 +1,14 @@
+.create {
+    display: flex;
+
+    .createContainer {
+        width: 100%;
+
+        .main {
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

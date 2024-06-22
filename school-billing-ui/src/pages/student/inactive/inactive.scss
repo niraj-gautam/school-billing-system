@@ -1,7 +1,7 @@
-.student {
+.inactive {
     display: flex;
 
-    .studentContainer {
+    .inactiveContainer {
         width: 100%;
 
         .main {
@@ -28,9 +28,5 @@
                 }
             }
         }
-    }
-
-    .link {
-        text-decoration: none;
     }
 }

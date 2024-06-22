@@ -1,7 +1,7 @@
 import userProfile from "./assets/userProfile.jpg";
 import { Link } from "react-router-dom";
 
-export const datatableRow = [
+export const studentDatatableRow = [
     {
         id: 1,
         studentName: "Niraj Gautam",
@@ -154,7 +154,7 @@ export const datatableRow = [
     },
 ];
 
-export const datatableColumn = [
+export const studentDatatableColumn = [
     { field: "id", headerName: "ID", width: 100 },
     {
         field: "studentName",
@@ -208,10 +208,71 @@ export const datatableColumn = [
         width: 120,
         renderCell: () => {
             return (
-                <Link to={"/student/:studentID"} className="link">
+                <Link
+                    to={"/student/:studentID"}
+                    className="link"
+                    style={{ textDecoration: "none" }}
+                >
                     <span className="viewButton"> Details</span>
                 </Link>
             );
+        },
+    },
+];
+export const inactiveStudentDatatableColumn = [
+    { field: "id", headerName: "ID", width: 100 },
+    {
+        field: "studentName",
+        headerName: "Name",
+        width: 200,
+        renderCell: (params) => {
+            return (
+                <div className="cellWithImg">
+                    <img src={params.row.img} alt="avatar" />
+                    {params.row.studentName}
+                </div>
+            );
+        },
+    },
+    {
+        field: "grade",
+        headerName: "Grade",
+        width: 100,
+    },
+    {
+        field: "dateOfJoining",
+        headerName: "DOJ",
+        description: "Date of Joining",
+
+        type: "date",
+        width: 120,
+    },
+    {
+        field: "totalFee",
+        headerName: "Total Fees",
+        sortable: false,
+        width: 120,
+    },
+    {
+        field: "paid",
+        headerName: "Paid",
+        sortable: false,
+        width: 120,
+    },
+    {
+        field: "balance",
+        headerName: "Balance",
+        sortable: false,
+        width: 120,
+    },
+    {
+        field: "action",
+        headerName: "Action",
+        sortable: false,
+        disableColumnMenu: true,
+        width: 120,
+        renderCell: () => {
+            return <span className="viewButton"> Mark Active </span>;
         },
     },
 ];

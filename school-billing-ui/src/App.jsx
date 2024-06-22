@@ -2,6 +2,7 @@ import Home from "./pages/home/Home";
 import Student from "./pages/student/Student";
 import Inactive from "./pages/student/inactive/Inactive";
 import Single from "./pages/single/Single";
+import Create from "./pages/create/Create";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -17,17 +18,14 @@ const router = createBrowserRouter([
     {
         path: "/student",
         element: <Student />,
-        index: { element: <Student /> },
-        children: [
-            {
-                path: "inactive",
-                element: <Inactive />,
-            },
-            // {
-            //     path: "/student/create",
-            //     element: <Create />,
-            // },
-        ],
+    },
+    {
+        path: "/student/inactive",
+        element: <Inactive />,
+    },
+    {
+        path: "/student/create",
+        element: <Create />,
     },
     {
         path: "/student/:studentID",

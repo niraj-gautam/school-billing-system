@@ -10,8 +10,15 @@
 
     &:hover {
         outline: 1px solid hsl(253, 100%, 61%);
-        background-color: none;
+        color: gray;
+        background-color: transparent;
     }
+
+    &:active {
+        background-color: hsl(253, 100%, 61%);
+        color: white;
+    }
+
     span {
         font-size: 0.875rem;
     }

@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 const Form = ({ isForm }) => {
     // const [readOnly , setReadOnly] = useState(inputElem)
 
+    const [file, setFile] = useState("");
+
     useEffect(() => {
         if (!isForm) {
             const form = document.getElementById("form");
@@ -29,12 +31,21 @@ const Form = ({ isForm }) => {
     return (
         <div className="form">
             <div className="top">
-                <h1>View Student</h1>
+                <h1>{isForm ? "Create Student" : "View Student"}</h1>
             </div>
 
             <div className="bottom">
                 <div className="left">
-                    <img src={userProfile} alt="student-avatar" />
+                    <img
+                        src={
+                            isForm
+                                ? file
+                                    ? URL.createObjectURL(file)
+                                    : "https://placehold.co/240x240"
+                                : userProfile
+                        }
+                        alt="student-avatar"
+                    />
                 </div>
                 <div className="right">
                     <form id="form">
@@ -47,47 +58,54 @@ const Form = ({ isForm }) => {
                                 type="file"
                                 id="file"
                                 style={{ display: "none" }}
+                                onChange={(e) => setFile(e.target.files[0])}
                             />
                         </div>
                         <div className="formInput">
                             <label>ID </label>
-                            <input type="number" value="12" />
+                            <input type="number" defaultValue="12" />
                         </div>
                         <div className="formInput">
                             <label>Name</label>
-                            <input type="text" value="Niraj Gautam" />
+                            <input type="text" defaultValue="Niraj Gautam" />
                         </div>
                         <div className="formInput">
                             <label>Grade</label>
-                            <input type="number" value="10" />
+                            <input type="number" defaultValue="10" />
                         </div>
                         <div className="formInput">
                             <label>Section</label>
-                            <input type="text" value="A" />
+                            <input type="text" defaultValue="A" />
                         </div>
                         <div className="formInput">
                             <label>{`DOJ (Date-of-Joining)`} </label>
-                            <input type="date" />
+                            <input
+                                type={isForm ? "date" : "text"}
+                                defaultValue={
+                                    isForm ? "2024-05-04" : "2024-05-04"
+                                }
+                                pattern="\d{4}-\d{2}-\d{2}"
+                            />
                         </div>
                         <div className="formInput">
                             <label>Total Fee</label>
-                            <input type="number" value="25000" />
+                            <input type="number" defaultValue="25000" />
                         </div>
                         <div className="formInput">
                             <label>Fee Paid</label>
-                            <input type="number" value="5000" />
+                            <input type="number" defaultValue="5000" />
                         </div>
                         <div className="formInput">
                             <label>Balance</label>
-                            <input type="number" value="2000" />
+                            <input type="number" defaultValue="2000" />
                         </div>
                         <div className="formInput">
                             <label>Parent's Name</label>
-                            <input type="text" value="Niraj Gautam" />
+                            <input type="text" defaultValue="Niraj Gautam" />
                         </div>
                         <div className="formInput">
                             <label>Contact</label>
-                            <input type="tel" value="+977 9812345678" />
+                            <input type="tel" defaultValue="+977 9812345678" />
                         </div>
 
                         <button id="button">Save</button>

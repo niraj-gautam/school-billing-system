@@ -1,11 +1,11 @@
 import React from "react";
 import "./student.scss";
 import { Link } from "react-router-dom";
-import Inactive from "./inactive/Inactive";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Datatable from "../../components/datatable/Datatable";
 import Createbtn from "../../components/create-btn/Createbtn";
+import { studentDatatableColumn, studentDatatableRow } from "../../data";
 
 const Student = () => {
     return (
@@ -16,10 +16,16 @@ const Student = () => {
                 <main className="main">
                     <div className="top">
                         <h1 className="title">Students</h1>
-                        <Createbtn text={"Create Student"} />
+                        <Link to={"/student/create"} className="link">
+                            <Createbtn text={"Create Student"} />
+                        </Link>
                     </div>
 
-                    <Datatable className="bottom" />
+                    <Datatable
+                        className="bottom"
+                        rowData={studentDatatableRow}
+                        columnData={studentDatatableColumn}
+                    />
                 </main>
             </div>
         </div>
