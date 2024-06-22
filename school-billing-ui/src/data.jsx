@@ -1,4 +1,5 @@
 import userProfile from "./assets/userProfile.jpg";
+import { Link } from "react-router-dom";
 
 export const datatableRow = [
     {
@@ -207,9 +208,9 @@ export const datatableColumn = [
         width: 120,
         renderCell: () => {
             return (
-                <>
+                <Link to={"/student/:studentID"} className="link">
                     <span className="viewButton"> Details</span>
-                </>
+                </Link>
             );
         },
     },
